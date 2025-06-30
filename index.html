@@ -20,9 +20,9 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(-45deg, #6a11cb, #2575fc, #6a11cb, #2575fc);
-      background-size: 400% 400%;
-      animation: gradientBG 10s ease infinite;
+      background: url('https://www.transparenttextures.com/patterns/animated-stripes.gif') repeat;
+      background-size: cover;
+      animation: moveBackground 30s linear infinite;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -32,16 +32,18 @@
       padding: 20px;
     }
 
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    @keyframes moveBackground {
+      0% { background-position: 0 0; }
+      100% { background-position: 1000px 1000px; }
     }
 
     .logo {
       max-width: 300px;
       width: 80%;
       margin-bottom: 30px;
+      background: white;
+      padding: 10px;
+      border-radius: 12px;
     }
 
     .btn {
@@ -49,7 +51,6 @@
       font-size: 1.2rem;
       font-weight: bold;
       color: white;
-      background: #ff5f6d;
       background: linear-gradient(to right, #ffc371, #ff5f6d);
       border: none;
       border-radius: 50px;
@@ -73,7 +74,13 @@
   <!-- Animated Button -->
   <a href="https://docs.google.com/presentation/d/1RpuusoMs8Di71zdR525odQoDnLPCvLNJYW3hst309e0/edit?usp=sharing" 
      class="btn" target="_blank" data-aos="fade-up" data-aos-duration="1500">
-    View Presentation
+   lecture
+  </a>
+
+  <br>
+   <a href="https://docs.google.com/presentation/d/1jR2cGARpyqDrGNg_CATuZx5_uVIPmeJnE_gEpP4CVW4/edit?usp=sharing" 
+     class="btn" target="_blank" data-aos="fade-up" data-aos-duration="1500">
+   laboratory 
   </a>
 
   <!-- AOS Script -->
