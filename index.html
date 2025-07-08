@@ -40,15 +40,25 @@
     .logo {
       max-width: 300px;
       width: 80%;
-      margin-bottom: 30px;
       background: white;
       padding: 10px;
       border-radius: 12px;
+      margin-bottom: 40px;
+    }
+
+    .button-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 600px;
     }
 
     .btn {
-      padding: 15px 30px;
-      font-size: 1.2rem;
+      flex: 1 1 calc(50% - 20px); /* 2 columns with gap */
+      min-width: 220px;
+      padding: 15px 20px;
+      font-size: 1.1rem;
       font-weight: bold;
       color: white;
       background: linear-gradient(to right, #ffc371, #ff5f6d);
@@ -64,6 +74,12 @@
       transform: scale(1.05);
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     }
+
+    @media (max-width: 600px) {
+      .btn {
+        flex: 1 1 100%; /* Stack buttons vertically on small screens */
+      }
+    }
   </style>
 </head>
 <body>
@@ -71,22 +87,18 @@
   <!-- Logo -->
   <img src="https://logowik.com/content/uploads/images/parul-university9542.jpg" alt="Parul University Logo" class="logo" data-aos="fade-down" data-aos-duration="1500">
 
-  <!-- Animated Button -->
-  <a href="https://docs.google.com/presentation/d/1RpuusoMs8Di71zdR525odQoDnLPCvLNJYW3hst309e0/edit?usp=sharing" 
-     class="btn" target="_blank" data-aos="fade-up" data-aos-duration="1500">
-   lecture
-  </a>
+  <!-- 2x2 Button Grid -->
+  <div class="button-grid" data-aos="fade-up" data-aos-duration="1500">
+    <a href="https://docs.google.com/presentation/d/1RpuusoMs8Di71zdR525odQoDnLPCvLNJYW3hst309e0/edit?usp=sharing" 
+       class="btn" target="_blank">Lecture</a>
 
-  <br>
-   <a href="https://docs.google.com/presentation/d/1jR2cGARpyqDrGNg_CATuZx5_uVIPmeJnE_gEpP4CVW4/edit?usp=sharing" 
-     class="btn" target="_blank" data-aos="fade-up" data-aos-duration="1500">
-   laboratory 
-  </a> <br>
+    <a href="https://docs.google.com/presentation/d/1jR2cGARpyqDrGNg_CATuZx5_uVIPmeJnE_gEpP4CVW4/edit?usp=sharing" 
+       class="btn" target="_blank">Laboratory</a>
 
-     <a href="./daa-syllabus-file.pdf"  download="./daa-syllabus-file.pdf"
-     class="btn" target="_blank" data-aos="fade-up" data-aos-duration="1500">
-   Syllabus 
-  </a>
+    <a href="./daa-syllabus-file.pdf" download class="btn" target="_blank">Syllabus</a>
+
+    <a href="./Introduction_to_Algorithms_Third_Edition_(2009).pdf" download class="btn" target="_blank">Ref Book</a>
+  </div>
 
   <!-- AOS Script -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
