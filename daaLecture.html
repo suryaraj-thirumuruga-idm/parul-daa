@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DAA Lecture Notes</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS Library -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('https://www.transparenttextures.com/patterns/animated-stripes.gif') repeat;
+      background-size: cover;
+      animation: moveBG 30s linear infinite;
+      color: #fff;
+      text-align: center;
+    }
+
+    @keyframes moveBG {
+      0% { background-position: 0 0; }
+      100% { background-position: 1000px 1000px; }
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .logo {
+      width: 180px;
+      margin-top: 20px;
+      border-radius: 12px;
+      background: #fff;
+      padding: 10px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin: 20px 0 10px;
+      color: #1f1c1c;
+    }
+
+    h3 {
+      font-weight: 400;
+      margin-bottom: 30px;
+      font-size: 1.2rem;
+      color: #b8b8b8;
+    }
+
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 15px;
+      padding: 10px 0;
+    }
+
+    .btn {
+      padding: 14px 0;
+      font-size: 1rem;
+      font-weight: 600;
+      color: white;
+      background: linear-gradient(to right, #ffc371, #ff5f6d);
+      border: none;
+      border-radius: 40px;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.8rem; }
+      h3 { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Logo -->
+    <img src="https://logowik.com/content/uploads/images/parul-university9542.jpg" alt="Parul University Logo" class="logo" data-aos="fade-down" data-aos-duration="1200" />
+
+    <!-- Headings -->
+    <h1 data-aos="fade-up" data-aos-delay="100">DAA Lecture Notes</h1>
+    <h3 data-aos="fade-up" data-aos-delay="200">Mr. S. Suryaraj Thirumuruga</h3>
+
+    <!-- Buttons Grid -->
+    <div class="button-grid">
+      <a href="https://docs.google.com/presentation/d/1RpuusoMs8Di71zdR525odQoDnLPCvLNJYW3hst309e0/edit?usp=sharing" class="btn" data-aos="fade-up" data-aos-delay="300">Unit 1</a>
+      <a href="https://docs.google.com/presentation/d/19v3l97q2wMQBobtTHZ4-l5G7ceUj93inmmuDdrhAu6s/edit?usp=sharing" class="btn" data-aos="fade-up" data-aos-delay="400">Unit 2</a>
+      <a href="#unit3" class="btn" data-aos="fade-up" data-aos-delay="500">Unit 3</a>
+      <a href="#unit4" class="btn" data-aos="fade-up" data-aos-delay="600">Unit 4</a>
+      <a href="#unit5" class="btn" data-aos="fade-up" data-aos-delay="700">Unit 5</a>
+      <a href="#unit6" class="btn" data-aos="fade-up" data-aos-delay="800">Unit 6</a>
+      <a href="#unit7" class="btn" data-aos="fade-up" data-aos-delay="900">Unit 7</a>
+    </div>
+  </div>
+
+  <!-- AOS Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
