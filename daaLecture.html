@@ -57,24 +57,23 @@
 
     .button-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
       padding: 10px 0;
     }
 
     .btn {
-      padding: 14px 0;
+      padding: 15px;
       font-size: 1rem;
       font-weight: 600;
       color: white;
       background: linear-gradient(to right, #ffc371, #ff5f6d);
       border: none;
-      border-radius: 40px;
+      border-radius: 50px;
       text-decoration: none;
-      display: inline-block;
-      cursor: pointer;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      display: block;
     }
 
     .btn:hover {
@@ -82,9 +81,19 @@
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     }
 
-    @media (max-width: 480px) {
+    /* Responsive for mobile */
+    @media (max-width: 768px) {
+      .button-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
       h1 { font-size: 1.8rem; }
       h3 { font-size: 1rem; }
+
+      .btn {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -107,6 +116,8 @@
       <a href="#unit5" class="btn" data-aos="fade-up" data-aos-delay="700">Unit 5</a>
       <a href="#unit6" class="btn" data-aos="fade-up" data-aos-delay="800">Unit 6</a>
       <a href="#unit7" class="btn" data-aos="fade-up" data-aos-delay="900">Unit 7</a>
+      <a href="./index.html" class="btn" data-aos="fade-up" data-aos-delay="900">Home 🏡</a>
+      <a href="https://docs.google.com/presentation/d/1jR2cGARpyqDrGNg_CATuZx5_uVIPmeJnE_gEpP4CVW4/edit?usp=sharing" class="btn" data-aos="fade-up" data-aos-delay="900">Lab 🧪</a>
     </div>
   </div>
 
