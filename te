@@ -1,55 +1,903 @@
- const questions = [
-      // First 25 questions already included...
-      { q: "Which of the following has the best time complexity for sorting in all cases?", options: ["Merge Sort", "Bubble Sort", "Selection Sort", "Insertion Sort"], answer: 0 },
-      { q: "What is the time complexity of binary search?", options: ["O(n)", "O(log n)", "O(n log n)", "O(n^2)"], answer: 1 },
-      { q: "In a recurrence relation T(n) = T(n/2) + c, what is the time complexity?", options: ["O(n)", "O(n log n)", "O(log n)", "O(1)"], answer: 2 },
-      { q: "Which method is used in the Master Theorem to solve recurrences?", options: ["Recursion Tree", "Substitution", "Direct method", "All of the above"], answer: 3 },
-      { q: "What does a loop invariant help prove?", options: ["Correctness of an algorithm", "Space complexity", "Time complexity", "Number of recursions"], answer: 0 },
-      { q: "What is the worst-case time complexity of Merge Sort?", options: ["O(n^2)", "O(log n)", "O(n)", "O(n log n)"], answer: 3 },
-      { q: "What is the purpose of a loop invariant in algorithm design?", options: ["Measure performance", "Track variable usage", "Prove correctness", "Improve speed"], answer: 2 },
-      { q: "Which sorting algorithm uses divide-and-conquer technique?", options: ["Bubble Sort", "Merge Sort", "Selection Sort", "Insertion Sort"], answer: 1 },
-      { q: "What is the base case in a recursive function?", options: ["The condition to stop recursion", "The first call", "The last call", "None"], answer: 0 },
-      { q: "Which algorithm finds the maximum and minimum with minimum comparisons?", options: ["Divide and Conquer", "Brute Force", "Greedy", "Recursion"], answer: 0 },
-      { q: "Which method is commonly used to guess the solution to a recurrence?", options: ["Substitution", "Recursion Tree", "Master Method", "All of these"], answer: 3 },
-      { q: "Which sorting technique is best suited for small datasets?", options: ["Merge Sort", "Bubble Sort", "Insertion Sort", "Quick Sort"], answer: 2 },
-      { q: "Which is not a characteristic of divide-and-conquer?", options: ["Divide the problem", "Solve subproblems independently", "Merge solutions", "Skip recursion"], answer: 3 },
-      { q: "What is the recurrence for binary search?", options: ["T(n) = T(n-1) + 1", "T(n) = T(n/2) + 1", "T(n) = 2T(n/2) + 1", "T(n) = T(n-2) + 1"], answer: 1 },
-      { q: "Which algorithm divides the array into subarrays then merges them?", options: ["Quick Sort", "Merge Sort", "Bubble Sort", "Selection Sort"], answer: 1 },
-      { q: "What is the main idea behind binary search?", options: ["Check all elements", "Divide into halves", "Use sorting", "Compare with first element"], answer: 1 },
-      { q: "In loop invariant method, when is it checked?", options: ["Before loop", "After loop", "During loop execution", "All of these"], answer: 3 },
-      { q: "Which of the following is NOT a sorting algorithm?", options: ["Merge Sort", "Quick Sort", "Binary Search", "Bubble Sort"], answer: 2 },
-      { q: "In Master Theorem, what does 'a' represent?", options: ["Subproblem size", "Number of subproblems", "Work outside recursion", "Problem size"], answer: 1 },
-      { q: "What is time complexity of linear search?", options: ["O(1)", "O(log n)", "O(n)", "O(n log n)"], answer: 2 },
-      { q: "Which algorithm is used for matrix multiplication?", options: ["Strassen's Algorithm", "Dijkstra", "Huffman", "Prim"], answer: 0 },
-      { q: "What is an example of divide-and-conquer algorithm?", options: ["Merge Sort", "Bubble Sort", "Linear Search", "Insertion Sort"], answer: 0 },
-      { q: "Which sorting algorithm repeatedly swaps adjacent elements?", options: ["Selection Sort", "Merge Sort", "Bubble Sort", "Quick Sort"], answer: 2 },
-      { q: "Which is the best case time complexity for Insertion Sort?", options: ["O(n^2)", "O(log n)", "O(n)", "O(1)"], answer: 2 },
-      { q: "Which algorithm uses the pivot element?", options: ["Merge Sort", "Quick Sort", "Bubble Sort", "Selection Sort"], answer: 1 },
+[
+  {
+    "question": "Which case analysis helps in understanding the algorithm's behavior under random input?",
+    "options": [
+      "Best Case",
+      "Average Case",
+      "Worst Case",
+      "None"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Which notation represents the tight bound of an algorithm?",
+    "options": [
+      "Big Oh",
+      "Big Omega",
+      "Big Theta",
+      "Little o"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Which sorting algorithm is stable and has worst-case time complexity of O(n^2)?",
+    "options": [
+      "Quick Sort",
+      "Heap Sort",
+      "Selection Sort",
+      "Insertion Sort"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "What is the time complexity of Bubble Sort in the best case?",
+    "options": [
+      "O(n)",
+      "O(n log n)",
+      "O(n^2)",
+      "O(log n)"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Which type of algorithm design uses recursive calls to divide problems?",
+    "options": [
+      "Dynamic Programming",
+      "Divide and Conquer",
+      "Greedy",
+      "Brute Force"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "What is the role of loop invariant in algorithm analysis?",
+    "options": [
+      "Optimizes the loop",
+      "Checks correctness during iterations",
+      "Improves time complexity",
+      "Calculates memory used"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Which method solves recurrence by expanding it recursively?",
+    "options": [
+      "Master Method",
+      "Recursion Tree",
+      "Substitution",
+      "Greedy"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Which property is essential for an algorithm to ensure it eventually finishes?",
+    "options": [
+      "Correctness",
+      "Finiteness",
+      "Effectiveness",
+      "Input"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "If an algorithm takes T(n) = 2T(n/2) + n, what is its time complexity?",
+    "options": [
+      "O(log n)",
+      "O(n)",
+      "O(n log n)",
+      "O(n^2)"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Which is not a property of an algorithm?",
+    "options": [
+      "Input",
+      "Output",
+      "Infinite steps",
+      "Effectiveness"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Which algorithm uses divide and conquer to sort the array in O(n log n) time?",
+    "options": [
+      "Bubble Sort",
+      "Selection Sort",
+      "Merge Sort",
+      "Insertion Sort"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "In Strassen's matrix multiplication, how many multiplications are used?",
+    "options": [
+      "7",
+      "8",
+      "9",
+      "6"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Which of the following problems can be solved using divide and conquer?",
+    "options": [
+      "Fibonacci Series",
+      "Binary Search",
+      "DFS",
+      "Kruskal\u2019s Algorithm"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "What is the worst-case time complexity of quick sort?",
+    "options": [
+      "O(n^2)",
+      "O(n log n)",
+      "O(log n)",
+      "O(n)"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "What strategy is used in the Merge Sort algorithm?",
+    "options": [
+      "Greedy",
+      "Divide and Conquer",
+      "Backtracking",
+      "Dynamic Programming"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Which step is not a part of divide and conquer?",
+    "options": [
+      "Divide",
+      "Conquer",
+      "Merge",
+      "Select"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "What is the complexity of Max-Min problem using divide and conquer?",
+    "options": [
+      "O(n)",
+      "O(n log n)",
+      "O(n^2)",
+      "O(log n)"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Which divide-and-conquer algorithm uses two pointers to sort?",
+    "options": [
+      "Bubble Sort",
+      "Merge Sort",
+      "Heap Sort",
+      "Counting Sort"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "In quick sort, worst-case occurs when pivot is chosen as:",
+    "options": [
+      "Middle element",
+      "Random element",
+      "Smallest/Largest element",
+      "Median"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "What is the recurrence relation for Merge Sort?",
+    "options": [
+      "T(n) = T(n-1) + n",
+      "T(n) = 2T(n/2) + n",
+      "T(n) = T(n/2) + log n",
+      "T(n) = 3T(n/2) + 1"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Which algorithm is used to find the minimum spanning tree using a greedy approach?",
+    "options": [
+      "Dijkstra\u2019s",
+      "Kruskal\u2019s",
+      "Bellman-Ford",
+      "Floyd-Warshall"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Which of the following is not a greedy algorithm?",
+    "options": [
+      "Prim's Algorithm",
+      "Dijkstra\u2019s Algorithm",
+      "Merge Sort",
+      "Kruskal's Algorithm"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "In 0/1 knapsack problem, greedy approach fails because:",
+    "options": [
+      "It maximizes profit",
+      "It minimizes weight",
+      "It does not consider optimal substructure",
+      "It ignores combinations"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Huffman coding algorithm is used for:",
+    "options": [
+      "Searching",
+      "Compression",
+      "Sorting",
+      "Path finding"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Which data structure is commonly used in Prim\u2019s algorithm?",
+    "options": [
+      "Stack",
+      "Queue",
+      "Heap",
+      "Set"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Which of the following is used in Dijkstra\u2019s algorithm to select the next node?",
+    "options": [
+      "Random choice",
+      "Shortest tentative distance",
+      "Longest path",
+      "Minimum edge"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Which greedy algorithm ensures prefix-free binary codes?",
+    "options": [
+      "Kruskal\u2019s",
+      "Prim\u2019s",
+      "Huffman",
+      "Bellman-Ford"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Which strategy is key to greedy algorithm design?",
+    "options": [
+      "Divide and conquer",
+      "Optimal substructure",
+      "Local optimization",
+      "Memoization"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Which property must be true for greedy algorithm to always give optimal solution?",
+    "options": [
+      "Greedy-choice property",
+      "Backtracking",
+      "Loop Invariant",
+      "Recursion"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Activity Selection Problem is solved using:",
+    "options": [
+      "Backtracking",
+      "Divide and Conquer",
+      "Greedy",
+      "Dynamic Programming"
+    ],
+    "correct": 2
+  }
 
-      // Additional 25 questions
-      { q: "Which recurrence relation represents Merge Sort?", options: ["T(n) = 2T(n/2) + n", "T(n) = T(n-1) + 1", "T(n) = T(n/2) + 1", "T(n) = T(n) + T(n-1)"], answer: 0 },
-      { q: "In which case does Quick Sort perform worst?", options: ["Sorted array", "Random array", "Reverse sorted", "All equal elements"], answer: 0 },
-      { q: "What is the key step in Merge Sort?", options: ["Finding pivot", "Swapping", "Merging arrays", "Linear search"], answer: 2 },
-      { q: "Which is true about Quick Sort?", options: ["Always O(n log n)", "Worst case O(n^2)", "Uses extra memory", "Doesn't use recursion"], answer: 1 },
-      { q: "Which algorithm is not divide-and-conquer?", options: ["Merge Sort", "Binary Search", "Bubble Sort", "Quick Sort"], answer: 2 },
-      { q: "What does T(n) = T(n/2) + 1 represent?", options: ["Merge Sort", "Binary Search", "Quick Sort", "Bubble Sort"], answer: 1 },
-      { q: "What is the purpose of base condition in recursion?", options: ["To repeat forever", "To stop recursion", "To call itself", "To print output"], answer: 1 },
-      { q: "Which algorithm finds both min and max in fewer comparisons?", options: ["Divide and Conquer", "Selection Sort", "Bubble Sort", "Insertion Sort"], answer: 0 },
-      { q: "Which of these is used to solve recurrences?", options: ["Brute force", "Sorting", "Master Theorem", "Searching"], answer: 2 },
-      { q: "Which method gives tree-like diagram for recurrence?", options: ["Recursion Tree", "Substitution", "Greedy", "Graph"], answer: 0 },
-      { q: "What is the worst case for Binary Search?", options: ["O(n)", "O(n^2)", "O(log n)", "O(1)"], answer: 2 },
-      { q: "Which sorting is based on comparison?", options: ["Counting Sort", "Radix Sort", "Merge Sort", "Bucket Sort"], answer: 2 },
-      { q: "Which algorithm splits input into halves and solves them recursively?", options: ["Insertion Sort", "Merge Sort", "Bubble Sort", "Selection Sort"], answer: 1 },
-      { q: "What is the main advantage of divide-and-conquer?", options: ["Fast execution", "Low memory", "Scalability", "All of these"], answer: 3 },
-      { q: "Which algorithm does not use recursion?", options: ["Merge Sort", "Quick Sort", "Bubble Sort", "Binary Search"], answer: 2 },
-      { q: "Which is the best time complexity of Merge Sort?", options: ["O(n^2)", "O(n)", "O(log n)", "O(n log n)"], answer: 3 },
-      { q: "Which technique is used in Strassen’s matrix multiplication?", options: ["Divide and conquer", "Greedy", "Dynamic programming", "Randomization"], answer: 0 },
-      { q: "How many comparisons are needed to find max and min in best case using D&C?", options: ["n-1", "3n/2 - 2", "n", "n/2"], answer: 1 },
-      { q: "Which algorithm selects smallest element and places it first?", options: ["Bubble Sort", "Selection Sort", "Merge Sort", "Insertion Sort"], answer: 1 },
-      { q: "Which algorithm is stable and adaptive?", options: ["Quick Sort", "Merge Sort", "Insertion Sort", "Selection Sort"], answer: 2 },
-      { q: "What is recurrence for T(n) = 2T(n/2) + n?", options: ["O(n)", "O(n log n)", "O(n^2)", "O(log n)"], answer: 1 },
-      { q: "What does the 'b' in Master Theorem represent?", options: ["Number of subproblems", "Size reduction factor", "Base case", "Number of calls"], answer: 1 },
-      { q: "Which algorithm is best for sorted input?", options: ["Insertion Sort", "Bubble Sort", "Selection Sort", "Quick Sort"], answer: 0 },
-      { q: "What is a stable sort?", options: ["Keeps equal elements in original order", "Always fast", "Doesn’t use memory", "Works only on numbers"], answer: 0 },
-      { q: "What is O(n log n) complexity commonly associated with?", options: ["Bubble Sort", "Merge Sort", "Linear Search", "Binary Search"], answer: 1 }
-    ];
+  {
+    "question": "Which case analysis helps in understanding the algorithm's behavior under random input?",
+    "options": [
+      "Best Case",
+      "Average Case",
+      "Worst Case",
+      "None"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Which notation represents the tight bound of an algorithm?",
+    "options": [
+      "Big Oh",
+      "Big Omega",
+      "Big Theta",
+      "Little o"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Which sorting algorithm is stable and has worst-case time complexity of O(n^2)?",
+    "options": [
+      "Quick Sort",
+      "Heap Sort",
+      "Selection Sort",
+      "Insertion Sort"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "What is the time complexity of Bubble Sort in the best case?",
+    "options": [
+      "O(n)",
+      "O(n log n)",
+      "O(n^2)",
+      "O(log n)"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Which type of algorithm design uses recursive calls to divide problems?",
+    "options": [
+      "Dynamic Programming",
+      "Divide and Conquer",
+      "Greedy",
+      "Brute Force"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "What is the role of loop invariant in algorithm analysis?",
+    "options": [
+      "Optimizes the loop",
+      "Checks correctness during iterations",
+      "Improves time complexity",
+      "Calculates memory used"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Which method solves recurrence by expanding it recursively?",
+    "options": [
+      "Master Method",
+      "Recursion Tree",
+      "Substitution",
+      "Greedy"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Which property is essential for an algorithm to ensure it eventually finishes?",
+    "options": [
+      "Correctness",
+      "Finiteness",
+      "Effectiveness",
+      "Input"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "If an algorithm takes T(n) = 2T(n/2) + n, what is its time complexity?",
+    "options": [
+      "O(log n)",
+      "O(n)",
+      "O(n log n)",
+      "O(n^2)"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Which is not a property of an algorithm?",
+    "options": [
+      "Input",
+      "Output",
+      "Infinite steps",
+      "Effectiveness"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Which algorithm uses divide and conquer to sort the array in O(n log n) time?",
+    "options": [
+      "Bubble Sort",
+      "Selection Sort",
+      "Merge Sort",
+      "Insertion Sort"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "In Strassen's matrix multiplication, how many multiplications are used?",
+    "options": [
+      "7",
+      "8",
+      "9",
+      "6"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Which of the following problems can be solved using divide and conquer?",
+    "options": [
+      "Fibonacci Series",
+      "Binary Search",
+      "DFS",
+      "Kruskal\u2019s Algorithm"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "What is the worst-case time complexity of quick sort?",
+    "options": [
+      "O(n^2)",
+      "O(n log n)",
+      "O(log n)",
+      "O(n)"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "What strategy is used in the Merge Sort algorithm?",
+    "options": [
+      "Greedy",
+      "Divide and Conquer",
+      "Backtracking",
+      "Dynamic Programming"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Which step is not a part of divide and conquer?",
+    "options": [
+      "Divide",
+      "Conquer",
+      "Merge",
+      "Select"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "What is the complexity of Max-Min problem using divide and conquer?",
+    "options": [
+      "O(n)",
+      "O(n log n)",
+      "O(n^2)",
+      "O(log n)"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Which divide-and-conquer algorithm uses two pointers to sort?",
+    "options": [
+      "Bubble Sort",
+      "Merge Sort",
+      "Heap Sort",
+      "Counting Sort"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "In quick sort, worst-case occurs when pivot is chosen as:",
+    "options": [
+      "Middle element",
+      "Random element",
+      "Smallest/Largest element",
+      "Median"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "What is the recurrence relation for Merge Sort?",
+    "options": [
+      "T(n) = T(n-1) + n",
+      "T(n) = 2T(n/2) + n",
+      "T(n) = T(n/2) + log n",
+      "T(n) = 3T(n/2) + 1"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Which algorithm is used to find the minimum spanning tree using a greedy approach?",
+    "options": [
+      "Dijkstra\u2019s",
+      "Kruskal\u2019s",
+      "Bellman-Ford",
+      "Floyd-Warshall"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Which of the following is not a greedy algorithm?",
+    "options": [
+      "Prim's Algorithm",
+      "Dijkstra\u2019s Algorithm",
+      "Merge Sort",
+      "Kruskal's Algorithm"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "In 0/1 knapsack problem, greedy approach fails because:",
+    "options": [
+      "It maximizes profit",
+      "It minimizes weight",
+      "It does not consider optimal substructure",
+      "It ignores combinations"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Huffman coding algorithm is used for:",
+    "options": [
+      "Searching",
+      "Compression",
+      "Sorting",
+      "Path finding"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Which data structure is commonly used in Prim\u2019s algorithm?",
+    "options": [
+      "Stack",
+      "Queue",
+      "Heap",
+      "Set"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Which of the following is used in Dijkstra\u2019s algorithm to select the next node?",
+    "options": [
+      "Random choice",
+      "Shortest tentative distance",
+      "Longest path",
+      "Minimum edge"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Which greedy algorithm ensures prefix-free binary codes?",
+    "options": [
+      "Kruskal\u2019s",
+      "Prim\u2019s",
+      "Huffman",
+      "Bellman-Ford"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Which strategy is key to greedy algorithm design?",
+    "options": [
+      "Divide and conquer",
+      "Optimal substructure",
+      "Local optimization",
+      "Memoization"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Which property must be true for greedy algorithm to always give optimal solution?",
+    "options": [
+      "Greedy-choice property",
+      "Backtracking",
+      "Loop Invariant",
+      "Recursion"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Activity Selection Problem is solved using:",
+    "options": [
+      "Backtracking",
+      "Divide and Conquer",
+      "Greedy",
+      "Dynamic Programming"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Which recurrence relation fits the substitution method T(n) = T(n/2) + 1?",
+    "options": [
+      "O(n)",
+      "O(log n)",
+      "O(n log n)",
+      "O(1)"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Which sorting algorithm requires the minimum number of swaps in average case?",
+    "options": [
+      "Bubble Sort",
+      "Insertion Sort",
+      "Selection Sort",
+      "Quick Sort"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "What is the best-case complexity of Selection Sort?",
+    "options": [
+      "O(n)",
+      "O(n log n)",
+      "O(n^2)",
+      "O(log n)"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Which of the following recurrence relations can be solved using Master\u2019s Theorem?",
+    "options": [
+      "T(n) = T(n-1) + n",
+      "T(n) = 2T(n/2) + n",
+      "T(n) = T(n-1) + log n",
+      "T(n) = T(n/3) + n"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Which notation best describes the minimum running time?",
+    "options": [
+      "Big-O",
+      "Big-Theta",
+      "Big-Omega",
+      "Little-o"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "The time complexity of nested loops is determined by:",
+    "options": [
+      "Sum of loops",
+      "Maximum loop",
+      "Product of loops",
+      "Minimum loop"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Which of the following guarantees algorithm correctness?",
+    "options": [
+      "Loop termination",
+      "Loop invariant",
+      "Asymptotic analysis",
+      "Recurrence relation"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Which sorting algorithm does not perform well on large datasets?",
+    "options": [
+      "Merge Sort",
+      "Quick Sort",
+      "Insertion Sort",
+      "Heap Sort"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "What is the key idea behind recursion tree method?",
+    "options": [
+      "Substitution",
+      "Iteration",
+      "Drawing subproblems",
+      "Guess and check"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Which analysis is most pessimistic?",
+    "options": [
+      "Best Case",
+      "Average Case",
+      "Worst Case",
+      "Amortized Case"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "What is the depth of the recursion tree in Merge Sort?",
+    "options": [
+      "log n",
+      "n",
+      "sqrt(n)",
+      "n log n"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Which of the following divide-and-conquer algorithms doesn't sort?",
+    "options": [
+      "Quick Sort",
+      "Merge Sort",
+      "Strassen\u2019s Multiplication",
+      "Heap Sort"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Which sorting algorithm performs best when data is already nearly sorted?",
+    "options": [
+      "Merge Sort",
+      "Quick Sort",
+      "Insertion Sort",
+      "Bubble Sort"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "The merge operation in merge sort takes how much time?",
+    "options": [
+      "O(n)",
+      "O(log n)",
+      "O(n^2)",
+      "O(1)"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Which algorithm breaks a matrix into 4 submatrices?",
+    "options": [
+      "Floyd-Warshall",
+      "Prim\u2019s",
+      "Strassen\u2019s",
+      "Kruskal\u2019s"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "What is the advantage of quick sort over merge sort?",
+    "options": [
+      "Stability",
+      "Less space usage",
+      "Better worst-case",
+      "More accurate"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Which algorithm uses a divide and conquer method and is not comparison-based?",
+    "options": [
+      "Merge Sort",
+      "Quick Sort",
+      "Counting Sort",
+      "Binary Search"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Which is faster in practice for random data: quick sort or merge sort?",
+    "options": [
+      "Quick Sort",
+      "Merge Sort",
+      "Both same",
+      "Depends on input"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Which algorithm is not part of divide and conquer family?",
+    "options": [
+      "Binary Search",
+      "Merge Sort",
+      "Kruskal's",
+      "Strassen's"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Which recurrence represents binary search?",
+    "options": [
+      "T(n) = T(n-1) + 1",
+      "T(n) = T(n/2) + 1",
+      "T(n) = 2T(n/2) + 1",
+      "T(n) = T(n) + n"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Which algorithm selects edges in increasing weight order?",
+    "options": [
+      "Prim\u2019s",
+      "Kruskal\u2019s",
+      "Dijkstra\u2019s",
+      "Bellman-Ford"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Which algorithm always selects local optimum first?",
+    "options": [
+      "Divide and Conquer",
+      "Backtracking",
+      "Greedy",
+      "Dynamic Programming"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Which greedy algorithm uses frequency to generate binary codes?",
+    "options": [
+      "Kruskal",
+      "Huffman",
+      "Dijkstra",
+      "Bellman-Ford"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "In which algorithm are nodes added based on minimum edge weight?",
+    "options": [
+      "Kruskal\u2019s",
+      "Prim\u2019s",
+      "Dijkstra\u2019s",
+      "Huffman\u2019s"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "What is the time complexity of Dijkstra's algorithm using min heap?",
+    "options": [
+      "O(V^2)",
+      "O(V log V + E)",
+      "O(E log V)",
+      "O(E + V)"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "In the fractional knapsack, what should be sorted first?",
+    "options": [
+      "Weights",
+      "Profits",
+      "Profit/Weight ratio",
+      "Items"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Which MST algorithm requires cycle checking?",
+    "options": [
+      "Prim\u2019s",
+      "Kruskal\u2019s",
+      "Dijkstra\u2019s",
+      "Bellman-Ford"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Which of these is a greedy algorithm for shortest path?",
+    "options": [
+      "Prim's",
+      "Bellman-Ford",
+      "Dijkstra\u2019s",
+      "Floyd-Warshall"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Which condition fails for 0/1 knapsack using greedy?",
+    "options": [
+      "Overlapping subproblems",
+      "Greedy choice property",
+      "Optimal substructure",
+      "None"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "In activity selection, what should be sorted to apply greedy?",
+    "options": [
+      "Start times",
+      "End times",
+      "Durations",
+      "Profits"
+    ],
+    "correct": 1
+  }
+]
