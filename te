@@ -1,3 +1,265 @@
+
+  {
+    question: "Which of the following is NOT a valid method to solve a recurrence relation?",
+    options: ["Recursion Tree", "Master Theorem", "Dynamic Programming", "Substitution Method"],
+    correct: 2
+  },
+  {
+    question: "What is the time complexity of Merge Sort in the worst case?",
+    options: ["O(n^2)", "O(n log n)", "O(n)", "O(log n)"],
+    correct: 1
+  },
+  {
+    question: "Which notation describes an upper bound that is not asymptotically tight?",
+    options: ["Theta", "Big-Omega", "Big-O", "Little-o"],
+    correct: 3
+  },
+  {
+    question: "In Master Theorem, which case applies if f(n) = Θ(n^log_b a)?",
+    options: ["Case 1", "Case 2", "Case 3", "Case 4"],
+    correct: 1
+  },
+  {
+    question: "Which sorting algorithm maintains a loop invariant stating that the array is sorted till the ith element?",
+    options: ["Merge Sort", "Bubble Sort", "Insertion Sort", "Quick Sort"],
+    correct: 2
+  },
+  {
+    question: "Which design strategy solves sub-problems only once and stores the results?",
+    options: ["Divide and Conquer", "Greedy", "Dynamic Programming", "Backtracking"],
+    correct: 2
+  },
+  {
+    question: "What is the best case complexity of Quick Sort?",
+    options: ["O(n^2)", "O(n log n)", "O(log n)", "O(n)"],
+    correct: 1
+  },
+  {
+    question: "Which recurrence relation does the merge sort algorithm follow?",
+    options: ["T(n) = 2T(n/2) + n", "T(n) = T(n/2) + 1", "T(n) = T(n-1) + n", "T(n) = 2T(n-1) + 1"],
+    correct: 0
+  },
+  {
+    question: "In loop invariant proof, what is proven during initialization?",
+    options: ["Condition holds before loop", "Condition holds at every iteration", "Condition holds after loop", "Condition is irrelevant"],
+    correct: 0
+  },
+  {
+    question: "What is the time complexity of Strassen’s Matrix Multiplication Algorithm?",
+    options: ["O(n^3)", "O(n^2.81)", "O(n log n)", "O(n^2)"],
+    correct: 1
+  },
+  {
+    question: "Which algorithm solves the problem of finding the minimum spanning tree using a greedy approach?",
+    options: ["Prim's algorithm", "Bellman-Ford algorithm", "Floyd-Warshall algorithm", "Dijkstra's algorithm"],
+    correct: 0
+  },
+  {
+    question: "Which problem does not exhibit optimal substructure?",
+    options: ["Longest Common Subsequence", "Matrix Chain Multiplication", "0/1 Knapsack", "Travelling Salesman Problem"],
+    correct: 3
+  },
+  {
+    question: "What is the best case time complexity of binary search?",
+    options: ["O(log n)", "O(n)", "O(1)", "O(n log n)"],
+    correct: 2
+  },
+  {
+    question: "Which technique is not used in Dynamic Programming?",
+    options: ["Overlapping Subproblems", "Memoization", "Divide and Conquer", "Backtracking"],
+    correct: 3
+  },
+  {
+    question: "In asymptotic notation, which notation gives the tightest upper bound?",
+    options: ["O(n^2)", "Ω(n)", "Θ(n log n)", "o(n)"],
+    correct: 0
+  },
+  {
+    question: "Which algorithm is not based on Divide and Conquer?",
+    options: ["Merge Sort", "Quick Sort", "Floyd-Warshall", "Binary Search"],
+    correct: 2
+  },
+  {
+    question: "Which sorting algorithm is not stable?",
+    options: ["Bubble Sort", "Merge Sort", "Quick Sort", "Insertion Sort"],
+    correct: 2
+  },
+  {
+    question: "Which algorithm is used for All-Pairs Shortest Path problem?",
+    options: ["Bellman-Ford", "Floyd-Warshall", "Dijkstra", "Prim"],
+    correct: 1
+  },
+  {
+    question: "Which of the following recurrence relations does Strassen’s algorithm follow?",
+    options: ["T(n) = 8T(n/2) + O(n^2)", "T(n) = 7T(n/2) + O(n^2)", "T(n) = 6T(n/2) + O(n^2)", "T(n) = 9T(n/2) + O(n^2)"],
+    correct: 1
+  },
+  {
+    question: "Which algorithm is used to detect negative weight cycles in a graph?",
+    options: ["Dijkstra's algorithm", "Prim's algorithm", "Kruskal's algorithm", "Bellman-Ford algorithm"],
+    correct: 3
+  },
+  {
+    question: "What is the solution to the recurrence relation T(n) = 2T(n/2) + n^2?",
+    options: ["O(n^2)", "O(n log n)", "O(n^2 log n)", "O(n)"],
+    correct: 2
+  },
+  {
+    question: "What is the recurrence for binary search?",
+    options: ["T(n) = T(n-1) + 1", "T(n) = T(n/2) + 1", "T(n) = 2T(n/2) + 1", "T(n) = T(n) + 1"],
+    correct: 1
+  },
+  {
+    question: "What is the best method to solve T(n) = T(n/2) + n?",
+    options: ["Substitution", "Recursion Tree", "Master Theorem", "All of the above"],
+    correct: 3
+  },
+  {
+    question: "Which is not an example of greedy algorithm?",
+    options: ["Prim’s algorithm", "Fractional Knapsack", "Dijkstra’s algorithm", "Matrix Chain Multiplication"],
+    correct: 3
+  },
+  {
+    question: "What is the base condition in recurrence relations?",
+    options: ["Smallest input size result", "Maximum input size", "Intermediate steps", "Worst case input"],
+    correct: 0
+  },
+  {
+    question: "Which algorithm has the worst-case time complexity O(n^2) but best-case O(n log n)?",
+    options: ["Quick Sort", "Heap Sort", "Merge Sort", "Bubble Sort"],
+    correct: 0
+  },
+  {
+    question: "Which of the following is a Divide and Conquer algorithm?",
+    options: ["Dijkstra’s algorithm", "Heap Sort", "Merge Sort", "Prim’s algorithm"],
+    correct: 2
+  },
+  {
+    question: "Which problem is an example of NP-complete?",
+    options: ["Travelling Salesman Problem", "Longest Common Subsequence", "Prim’s algorithm", "Bellman-Ford"],
+    correct: 0
+  },
+  {
+    question: "Which method is used to prove the correctness of loops?",
+    options: ["Greedy strategy", "Loop Invariant", "Backtracking", "Master Theorem"],
+    correct: 1
+  },
+  {
+    question: "What is the main idea behind Greedy algorithms?",
+    options: ["Global optimization", "Try all options", "Make the best choice at each step", "Divide into sub-problems"],
+    correct: 2
+  },
+  {
+    question: "Which property is required for greedy algorithms to work optimally?",
+    options: ["Memoization", "Loop Invariant", "Greedy-choice property", "Randomization"],
+    correct: 2
+  },
+  {
+    question: "In the Master Theorem, what does 'a' represent?",
+    options: ["Work done outside recursion", "Input size", "Number of subproblems", "Constant overhead"],
+    correct: 2
+  },
+  {
+    question: "Which sorting algorithm has a recurrence T(n) = T(n/2) + O(1)?",
+    options: ["Binary Insertion Sort", "Heap Sort", "Binary Search", "Quick Sort"],
+    correct: 2
+  },
+  {
+    question: "Which algorithm uses a min-heap data structure in its implementation?",
+    options: ["Prim’s Algorithm", "Kruskal’s Algorithm", "Merge Sort", "Bubble Sort"],
+    correct: 0
+  },
+  {
+    question: "Which algorithm has the same asymptotic time complexity as Merge Sort?",
+    options: ["Heap Sort", "Bubble Sort", "Quick Sort Worst Case", "Insertion Sort"],
+    correct: 0
+  },
+  {
+    question: "Which is not a sorting algorithm?",
+    options: ["Quick Sort", "Merge Sort", "Binary Search", "Heap Sort"],
+    correct: 2
+  },
+  {
+    question: "Which algorithm solves single-source shortest path in graphs with negative weights?",
+    options: ["Dijkstra", "Prim", "Kruskal", "Bellman-Ford"],
+    correct: 3
+  },
+  {
+    question: "What is the best-case time complexity of Insertion Sort?",
+    options: ["O(n^2)", "O(n log n)", "O(n)", "O(log n)"],
+    correct: 2
+  },
+  {
+    question: "What is the main reason Merge Sort is preferred over Quick Sort in linked lists?",
+    options: ["Less comparisons", "Stable sorting", "No random access needed", "Space efficiency"],
+    correct: 2
+  },
+  {
+    question: "Which algorithm uses divide-and-conquer and achieves logarithmic depth of recursion?",
+    options: ["Quick Sort", "Merge Sort", "Binary Search", "Bubble Sort"],
+    correct: 2
+  },
+  {
+    question: "Which of the following is used to solve recurrence relations?",
+    options: ["Loop Invariant", "Amortized Analysis", "Master Method", "Greedy Choice Property"],
+    correct: 2
+  },
+  {
+    question: "Which is the best case input for Quick Sort?",
+    options: ["Sorted Array", "Reverse Sorted", "Random Array", "Pivot at center every time"],
+    correct: 3
+  },
+  {
+    question: "Which algorithm guarantees optimal solution for the fractional knapsack problem?",
+    options: ["Dynamic Programming", "Greedy Algorithm", "Backtracking", "Divide and Conquer"],
+    correct: 1
+  },
+  {
+    question: "Which is an example of a non-polynomial time algorithm?",
+    options: ["Bubble Sort", "Insertion Sort", "TSP Brute Force", "Binary Search"],
+    correct: 2
+  },
+  {
+    question: "Which problem can be solved using Huffman Coding?",
+    options: ["Compression", "Shortest Path", "MST", "TSP"],
+    correct: 0
+  },
+  {
+    question: "Which recurrence represents Quick Sort's worst-case?",
+    options: ["T(n) = T(n/2) + n", "T(n) = T(n-1) + O(n)", "T(n) = 2T(n/2) + n", "T(n) = T(n) + 1"],
+    correct: 1
+  },
+  {
+    question: "Which case of Master Theorem applies when f(n) is polynomially larger than n^log_b a?",
+    options: ["Case 1", "Case 2", "Case 3", "None"],
+    correct: 2
+  },
+  {
+    question: "Which of the following is NOT a valid method to solve a recurrence relation?",
+    options: ["Recursion Tree", "Master Theorem", "Dynamic Programming", "Substitution Method"],
+    correct: 2
+  },
+  {
+    question: "Which of the following asymptotic notations provides an upper bound?",
+    options: ["Big Theta", "Big Oh", "Big Omega", "None of the above"],
+    correct: 1
+  },
+  {
+    question: "Which sorting algorithm has the best worst-case time complexity?",
+    options: ["Merge Sort", "Quick Sort", "Heap Sort", "Bubble Sort"],
+    correct: 0
+  }
+
+
+
+
+
+
+
+
+
+
+
 [
   {
     "question": "Which case analysis helps in understanding the algorithm's behavior under random input?",
